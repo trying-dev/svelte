@@ -4,13 +4,32 @@
 	let count = 0;
 
 	const displayed_count = spring();
+	// console.log('displayed_count : ', displayed_count)
+
+
 	$: displayed_count.set(count);
+
+	console.log('displayed_count : ', displayed_count)
+
+	
 	$: offset = modulo($displayed_count, 1);
 
+	console.log('offset : ', offset)
+
+
+	// 
+
 	function modulo(n: number, m: number) {
+		const nn = Number((n).toFixed(2))
 		// handle negative numbers
+		console.log(`
+n : ${nn} - m : ${m}     (${nn} % ${m}) = ${(nn % m).toFixed(2)}
+(${nn} % ${m}) + ${m} : ${((nn % m) + m).toFixed(2)} 
+((${nn} % ${m}) + ${m}) % ${m} =  ${(((nn % m) + m) % m).toFixed(2)}
+`)
 		return ((n % m) + m) % m;
 	}
+
 </script>
 
 <div class="counter">
@@ -21,7 +40,7 @@
 	</button>
 
 	<div class="counter-viewport">
-		<div class="counter-digits" style="transform: translate(0, {100 * offset}%)">
+		<div class="counter-digits" style="transition: unset; transform: translate(0, {100 * offset}%)">
 			<strong class="hidden" aria-hidden="true">{Math.floor($displayed_count + 1)}</strong>
 			<strong>{Math.floor($displayed_count)}</strong>
 		</div>
@@ -52,6 +71,7 @@
 		background-color: transparent;
 		touch-action: manipulation;
 		font-size: 2rem;
+		cursor: pointer;
 	}
 
 	.counter button:hover {
