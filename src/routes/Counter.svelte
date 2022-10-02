@@ -9,12 +9,12 @@
 
 	$: displayed_count.set(count);
 
-	console.log('displayed_count : ', displayed_count)
+	// console.log('displayed_count : ', displayed_count)
 
 	
 	$: offset = modulo($displayed_count, 1);
 
-	console.log('offset : ', offset)
+	// console.log('offset : ', offset)
 
 
 	// 
@@ -22,11 +22,11 @@
 	function modulo(n: number, m: number) {
 		const nn = Number((n).toFixed(2))
 		// handle negative numbers
-		console.log(`
-n : ${nn} - m : ${m}     (${nn} % ${m}) = ${(nn % m).toFixed(2)}
-(${nn} % ${m}) + ${m} : ${((nn % m) + m).toFixed(2)} 
-((${nn} % ${m}) + ${m}) % ${m} =  ${(((nn % m) + m) % m).toFixed(2)}
-`)
+// 		console.log(`
+// n : ${nn} - m : ${m}     (${nn} % ${m}) = ${(nn % m).toFixed(2)}
+// (${nn} % ${m}) + ${m} : ${((nn % m) + m).toFixed(2)} 
+// ((${nn} % ${m}) + ${m}) % ${m} =  ${(((nn % m) + m) % m).toFixed(2)}
+// `)
 		return ((n % m) + m) % m;
 	}
 
