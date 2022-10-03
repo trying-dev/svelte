@@ -1,18 +1,10 @@
 <script>
-	import { page } from '$app/stores';
-	const list = ['data-1', 'data-2', 'params', 'routeId', 'url'];
+	import Menu from './Menu.svelte'
+	const list = ['input-properties', 'input-methods'];
 </script>
 
-<div class="loading-data">
-	<h3>Menu:</h3>
-
-	<ul>
-		{#each list as item}
-			<li class:active={$page.url.pathname.startsWith(`${item}`)}>
-				<a href={`/loading-data/${item}`}>{item}</a>
-			</li>
-		{/each}
-	</ul>
+<div class="loading-data-layout">
+	<Menu list={list} />
 
 	<slot />
 </div>
