@@ -24,11 +24,17 @@
 			<li class:active={$page.url.pathname === '/'}>
 				<a href="/">Home</a>
 			</li>
+
 			<li class:active={$page.url.pathname === '/about'}>
 				<a href="/about">About</a>
 			</li>
+
 			<li class:active={$page.url.pathname.startsWith('/sverdle')}>
 				<a href="/sverdle">Sverdle</a>
+			</li>
+
+			<li class:active={$page.url.pathname.startsWith('/loading-data')}>
+				<a href="/loading-data">loading-data</a>
 			</li>
 			
 		</ul>
