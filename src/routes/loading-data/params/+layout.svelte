@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	const list = ['data-1', 'data-2', 'params', 'routeId', 'url'];
+	const list = ['first', 'second', 'third/fourht', 'etwas/anderes/auch']
 </script>
 
 <div class="loading-data">
@@ -9,7 +9,7 @@
 	<ul>
 		{#each list as item}
 			<li class:active={$page.url.pathname.startsWith(`${item}`)}>
-				<a href={`/loading-data/${item}`}>{item}</a>
+				<a href={`/loading-data/params/${item}`}>{item}</a>
 			</li>
 		{/each}
 	</ul>
