@@ -1,6 +1,6 @@
 <script>
 	import Menu from '../Menu.svelte'
-	const list = [];
+	const list = ['depends', 'fetch', 'parents', 'setHeaders'];
 </script>
 
 <div>

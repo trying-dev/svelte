@@ -1,15 +1,11 @@
 <script>
 	/** @type {import('./$types').PageData} */
 	export let data;
-
-	// console.log(data)
 </script>
 
 <div>
-	<h1>Loading Data - Third part</h1>
-
-	<h2>{data.message}</h2>
-	<h2>{JSON.stringify(data.params, null, "\t")}</h2>
+	<h3>Children</h3>
+	{data}
 </div>
 
 <style>

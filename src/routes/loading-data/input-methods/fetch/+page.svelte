@@ -1,6 +1,5 @@
 <div>
-	<h1>Loading Data</h1>
-	<h2>Home page</h2>
+	<h3>Fetch</h3>
 </div>
 
 <style>

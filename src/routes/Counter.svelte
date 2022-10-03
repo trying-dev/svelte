@@ -17,12 +17,10 @@
 	// console.log('offset : ', offset)
 
 
-	// 
-
 	function modulo(n: number, m: number) {
 		const nn = Number((n).toFixed(2))
 		// handle negative numbers
-// 		console.log(`
+		// console.log(`
 // n : ${nn} - m : ${m}     (${nn} % ${m}) = ${(nn % m).toFixed(2)}
 // (${nn} % ${m}) + ${m} : ${((nn % m) + m).toFixed(2)} 
 // ((${nn} % ${m}) + ${m}) % ${m} =  ${(((nn % m) + m) % m).toFixed(2)}
