@@ -1,13 +1,12 @@
 <script>
-	import Menu from './Menu.svelte'
+	import Menu from '$lib/components/Menu.svelte'
 	const list = ['input-properties', 'input-methods', 'output', 'errors', 'invalidation', 'shared-state'];
 </script>
 
-<div class="loading-data-layout">
+<div>
+	<h3>Loading data</h3>
+
 	<Menu list={list} />
 
 	<slot />
 </div>
-
-<style>
-</style>

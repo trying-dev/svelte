@@ -1,5 +1,5 @@
 <script>
-	import Menu from '../Menu.svelte'
+	import Menu from '$lib/components/Menu.svelte'
 	const list = ['depends', 'fetch', 'parents', 'setHeaders'];
 </script>
 

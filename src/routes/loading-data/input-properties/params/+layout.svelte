@@ -1,5 +1,5 @@
 <script>
-	import Menu from '../../Menu.svelte'
+	import Menu from '$lib/components/Menu.svelte'
 	const list = ['first', 'second', 'third/fourht', 'etwas/anderes/auch']
 </script>
 
