@@ -1,10 +1,6 @@
-<div>
-	<h1>Loading Data</h1>
-	<h2>Home page</h2>
-</div>
+<svelte:head>
+	<title>Loading Data</title>
+	<meta name="description" content="Loading Data how to use" />
+</svelte:head>
 
-<style>
-	div {
-		text-align: center;
-	}
-</style>
+<div />

@@ -10,7 +10,7 @@ const getPostFromDatabase = (/** @type {string} */ slug) =>
 		});
 	});
 
-/** @type {import('./$types').PageServerLoad} */
+/** @type {import('.svelte-kit/types/src/routes/blog/[slug]/$types').PageServerLoad} */
 export async function load({ params }) {
 	const post = await getPostFromDatabase(params.slug);
 
