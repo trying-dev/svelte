@@ -1,6 +1,7 @@
 <script>
 	import Menu from '$lib/components/Menu.svelte'
 	const list = ['input-properties', 'input-methods', 'output', 'errors', 'invalidation', 'shared-state'];
+
 </script>
 
 <div>

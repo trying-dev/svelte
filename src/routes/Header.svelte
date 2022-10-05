@@ -4,18 +4,20 @@
 	import logo from '$lib/images/svelte-logo.svg';
 	import github from '$lib/images/github.svg';
 
-	const list = [
-		'about',
-		'blog',
-		'easy-server',
-		'loading-data',
-		'login',
-		'max-brothers',
-		'registration',
-		'sverdle',
-		'todo',
-		'what-is-my-user-agent'
-	];
+	export let list = ['etwas']
+
+	// const list = [
+	// 	'about',
+	// 	'blog',
+	// 	'easy-server',
+	// 	'loading-data',
+	// 	'login',
+	// 	'max-brothers',
+	// 	'registration',
+	// 	'sverdle',
+	// 	'todo',
+	// 	'what-is-my-user-agent'
+	// ];
 </script>
 
 <header>

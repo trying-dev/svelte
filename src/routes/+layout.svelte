@@ -2,10 +2,13 @@
 	import Header from './Header.svelte';
 	import './styles.css';
 	import './reset.css';
+
+	/** @type {import('./$types').LayoutData} */
+	export let data;
 </script>
 
 <div class="app">
-	<Header />
+	<Header list={data.routes}/>
 
 	<main>
 		<slot />
