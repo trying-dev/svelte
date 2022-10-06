@@ -9,5 +9,11 @@ declare namespace App {
  
    interface Platform {}
 
+   interface Locals {
+      user: {
+         isAdmin: boolean
+      }
+   }
+
 
 }
