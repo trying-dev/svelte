@@ -4,7 +4,7 @@
 </script>
 
 <div>
-	<Menu list={list} />
+	<Menu routes={list} />
 
 	<slot />
 </div>

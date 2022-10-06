@@ -5,7 +5,7 @@
 </script>
 
 <div>
-	<Menu list={data.routes} />
+	<Menu routes={data.routes} />
 
 	<slot />
 </div>

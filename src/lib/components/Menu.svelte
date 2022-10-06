@@ -2,19 +2,17 @@
 	export let header = false;
 
 	import { page } from '$app/stores';
+	
 	/**
 	 * @type {string[]}
 	 */
-	export let list;
+	export let routes;
 
 	export let pathname = $page.url.pathname;
-	pathname = pathname.length === 1 ? '' : pathname
-	export let routeId = $page.routeId
+	pathname = pathname.length === 1 ? '' : pathname;
+	export let routeId = $page.routeId;
 
-	// console.log('$page : ', $page)
-	// console.log(pathname.length, pathname)
-
-	list.forEach((element) => {
+	routes.forEach((element) => {
 		if (pathname.indexOf(element) !== -1)
 			pathname = pathname.slice(0, pathname.indexOf(element) - 1);
 	});
@@ -25,12 +23,10 @@
 		<h3>Menu:</h3>
 	{/if}
 
-	routeId = {routeId}
-
 	<ul>
-		{#each list as item}
-			<li class:active={pathname.startsWith(`${item}`)}>
-				<a href={`${pathname}/${item}`}>{item}</a>
+		{#each routes as last_route}
+			<li class:active={pathname.startsWith(`${last_route}`)}>
+				<a href={`${pathname}/${last_route}`}>{last_route}</a>
 			</li>
 		{/each}
 	</ul>

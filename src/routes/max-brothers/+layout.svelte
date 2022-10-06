@@ -4,7 +4,7 @@
 
 <div>
 
-	<Menu list={['etwas', 'cualquiera']} />
+	<Menu routes={['etwas', 'cualquiera']} />
 
 	Supuestamente deberia saltar a 404 
 

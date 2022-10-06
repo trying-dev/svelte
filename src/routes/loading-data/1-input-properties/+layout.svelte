@@ -4,7 +4,7 @@
 </script>
 
 <div class="loading-data">
-	<Menu list={list} />
+	<Menu routes={list} />
 
 	<slot />
 </div>
