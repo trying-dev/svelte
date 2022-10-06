@@ -8,6 +8,11 @@
 	export let list;
 
 	export let pathname = $page.url.pathname;
+	pathname = pathname.length === 1 ? '' : pathname
+	export let routeId = $page.routeId
+
+	// console.log('$page : ', $page)
+	// console.log(pathname.length, pathname)
 
 	list.forEach((element) => {
 		if (pathname.indexOf(element) !== -1)
@@ -19,6 +24,8 @@
 	{#if !header}
 		<h3>Menu:</h3>
 	{/if}
+
+	routeId = {routeId}
 
 	<ul>
 		{#each list as item}
