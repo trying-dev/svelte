@@ -1,24 +1,24 @@
-<script>
-	/** @type {import('./$types').PageData} */
-	export let data;
- 
-	// console.log(data.a); // 'a'
-	// console.log(data.b); // 'b'
-	// console.log(data.c.value); // `Promise {...}`
- </script>
-
+<svelte:head>
+	<title>Loading Data - Invalidation</title>
+	<meta name="description" content="Loading Data Invalidation how to use" />
+</svelte:head>
 
 <div>
-	data.a = {data.a}
-	<br />
-	<br />
+	<h3>Shared State</h3>
 
-	data.b = {data.b}
-	<br />
-	<br />
-
-	data.c.value = {data.c.value}
-	<br />
-	<br />
-
+	<div>
+		In many server environments, a single instance of your app will serve multiple users. 
+		For that reason, per-request state must not be stored in shared variables outside 
+		your load functions, but should instead be stored in event.locals. Similarly, 
+		per-user state must not be stored in global variables, 
+		but should instead make use of $page.data 
+		(which contains the combined data of all load functions) 
+		or use Svelte's context feature to create scoped state.
+	</div>
 </div>
+
+<style>
+	div {
+		white-space: pre-line;
+	}
+</style>
