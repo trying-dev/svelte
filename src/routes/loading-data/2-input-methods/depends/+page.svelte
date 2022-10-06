@@ -1,15 +1,13 @@
 <script>
+	import { invalidate } from '$app/navigation';
 	/** @type {import('./$types').PageData} */
 	export let data;
-</script>
-
-<div>
-
-	<h3>{data.depends}</h3>
-</div>
-
-<style>
-	div {
-		text-align: center;
+ 
+	const pageRefresh = async () => {
+	  await invalidate('my-stuff:foo');
 	}
-</style>
+ </script>
+ 
+ <p>{data.foo}<p>
+ <p>{data.bar}</p>
+ <button on:click={pageRefresh}>Refresh my stuff</button>

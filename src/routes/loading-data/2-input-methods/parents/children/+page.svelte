@@ -1,15 +1,9 @@
 <script>
 	/** @type {import('./$types').PageData} */
 	export let data;
+	// console.log(data)
 </script>
 
-<div>
-	<h3>Children</h3>
-	{data}
-</div>
-
-<style>
-	div {
-		text-align: center;
-	}
-</style>
+<pre>
+{JSON.stringify(data, null, 2) }
+</pre>

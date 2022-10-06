@@ -1,10 +1,11 @@
 <script>
 	import Menu from '$lib/components/Menu.svelte'
-	const list = ['data-1', 'data-2', 'params', 'routeId', 'url'];
+	/** @type {import('./$types').LayoutData} */
+	export let data;
 </script>
 
 <div class="loading-data">
-	<Menu routes={list} />
+	<Menu routes={data.routes} />
 
 	<slot />
 </div>
